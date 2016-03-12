@@ -11,11 +11,13 @@ var MarkdownPreview = React.createClass({
   },
   render: function(){
     return (
-      <div classname="markdown-content">
-        <textarea classname="text-input" onChange={this.textChanged}>
-          {this.state.text}
-        </textarea>
-        <div classname="preview-area">
+      <div className="content">
+        <div className="input-area">
+          <textarea className="text-input" onChange={this.textChanged}>
+            {this.state.text}
+          </textarea>
+        </div>
+        <div className="preview-area">
           <span dangerouslySetInnerHTML={this.rawMarkup()} />
         </div>
       </div>
